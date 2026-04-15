@@ -1,0 +1,16 @@
+name: LogStream
+version: '${version}'
+main: com.rokingdom.logstream.LogStreamPlugin
+api-version: '1.20'
+description: Stream your Minecraft server logs to a web browser in real time via WebSocket.
+author: Rokingdom
+website: https://github.com/Rokingdom/LogStream
+commands:
+  logstream:
+    description: Manage the LogStream plugin
+    usage: /logstream <reload|status>
+    permission: logstream.admin
+permissions:
+  logstream.admin:
+    description: Allows use of /logstream commands
+    default: op

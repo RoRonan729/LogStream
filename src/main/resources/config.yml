@@ -1,0 +1,26 @@
+# LogStream Configuration
+
+# The port the WebSocket server will listen on.
+# Make sure this port is open in your firewall/GCP rules.
+websocket-port: 8085
+
+# Optional authentication token. Clients must send this as the first message
+# after connecting or they will be disconnected.
+# Leave empty to disable authentication.
+auth-token: ""
+
+# Which log levels to forward to connected clients.
+# Options: INFO, WARN, ERROR, DEBUG, TRACE, FATAL
+# Remove a level from this list to hide it from the stream.
+allowed-levels:
+  - INFO
+  - WARN
+  - ERROR
+
+# Maximum number of recent log lines to send to a client when they first connect.
+# Set to 0 to disable backlog.
+backlog-size: 50
+
+# Maximum number of simultaneous WebSocket connections allowed.
+# Set to 0 for unlimited.
+max-connections: 20
